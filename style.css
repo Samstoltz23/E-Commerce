@@ -7,12 +7,23 @@
   font-family: "Roboto", sans-serif;
 }
 
-nav{
+nav {
   height:80px;
   display:flex;
 }
 
-.nav__container{
+p{
+  line-height:1.5;
+}
+
+img{
+  width:100%;
+  height:100%;
+  max-height:50vh;
+  padding: 20px;
+}
+
+.nav__container {
   width:100%;
   max-width:1200px;
   padding: 0 24px;
@@ -22,8 +33,12 @@ nav{
   margin: 0 auto;
 }
 
+.text-blue{
+  color:#2563eb;
+}
 .logo{
   width:160px;
+  border-radius: 20px;
 }
 
 ul{
@@ -31,14 +46,14 @@ ul{
 }
 
 li{
-  list-style-type:none;
+  list-style-type: none;
 }
 
 .nav__link{
   margin-left: 16px;
   text-decoration:none;
   font-size: 20px;
-  color: skyblue;
+  color: #2563eb;
   font-weight: bold;
   padding: 8px;
 }
@@ -48,10 +63,115 @@ li{
 }
 
 .nav__link--primary{
-  border: 2px solid skyblue;
-  border-radius:4px;
+  border: 2px solid #2563eb;
+  border-radius:20px;
 }
 
 .nav__link--primary:hover{
   text-decoration:none;
+}
+
+#landing{
+  background-color:#dceaf7;
+}
+
+header{
+  height: calc(100vh-80px);
+}
+
+.header__container{
+  padding-top: 24px;
+  width:100%;
+  max-width:720px;
+  margin: 0 auto;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+
+.header__description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size:56px;
+  color:#2563eb;
+  margin-button: 24px;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  font-size:32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+button{
+  cursor: pointer;
+}
+button:active{
+  transform: translateY(1px);
+}
+.btn{
+  background-color: #2563eb;
+  color:white;
+  padding: 12px 24px;
+  font-size:20px;
+  border-radius: 20px;
+  border:none;
+}
+
+.header__img--wrapper{
+  padding:20px;
+}
+
+.container{
+padding: 56px 0;
+}
+
+.row{
+width:100%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* HIGHLIGHTS */
+
+.highlight__wrapper{
+  display:flex;
+}
+
+.highlight {
+  padding: 0 24px;
+  width: calc(100% / 3);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.highlight__para{
+  text-align: center;
+  max-width:280px;
+}
+
+.highlight__img{
+  border: 2px solid #2564eb80;
+  color:#2563eb;
+  width:100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size:32px;
+  margin-bottom:24px;
+}
+
+.highlight__subtitle{
+font-size:20px;
+margin-bottom:16px;
 }
