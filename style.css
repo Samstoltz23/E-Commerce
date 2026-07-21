@@ -151,7 +151,7 @@ margin: 0 auto;
 }
 
 #highlights:before{
-  background: url(assests/wave.svg);
+  background: url("assets/wave.svg");
   content: "";
   position: absolute;
   width:101vw;
@@ -161,11 +161,11 @@ margin: 0 auto;
   z-index: 1;
   background-size: cover;
   background-repeat: no-repeat;
-  transform: translateY(-100%);
+  transform: translateY(-100%)rotate(180deg);
 }
 
 #highlights:after{
-  background: url (assets/wave.svg);
+  background: url("assets/wave.svg");
   content: "";
   position: absolute;
   width:101vw;
@@ -175,7 +175,7 @@ margin: 0 auto;
   z-index: 1;
   background-size: cover;
   background-repeat: no-repeat;
-  transform: translateY(100%);
+  transform: translateY(100%) rotate(180deg);
 }
 
 
@@ -220,5 +220,5 @@ margin-bottom:16px;
 
 
 #features{
-  background-color:
+  background-color: rgba (115, 66, 214, 0.1);
 }
