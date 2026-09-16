@@ -1,24 +1,48 @@
 function renderBooks() {
-  const booksWrapper = document.querySelector[`.books`];
-  console.log(booksWrapper);
-  // `<div class="book">
-  //   <figure class="book__img--wrapper">
-  //     <img class="book__img" src="assets/crack the coding interview.png" alt="">
-  //   </figure>
-  //   <div class="book__title">
-  //     Crack the Coding Interview
-  //   </div>
-  //   <div class="book__ratings">
-  //     <i class="fas fa-star"></i>
-  //     <i class="fas fa-star"></i>
-  //     <i class="fas fa-star"></i>
-  //     <i class="fas fa-star"></i>
-  //     <i class="fas fa-star-half-alt"></i>
-  //   </div>
-  //   <div class="book__price">
-  //     <span class="book__price--normal">$59.95</span> $14.95
-  //   </div>
-  // </div>`
+  const booksWrapper = document.querySelector(`.books`);
+
+  const books = getBooks();
+
+  
+  if(filter === "LOW_TO_HIGH"){
+    books.sort((a, b) => a.originalPrice - b.originalPrice);
+  }
+  else if (filter === 'HIGH_TO_LOW'){
+    books.sort((a, b) => b.originalPrice - a.originalPrice);
+  }
+  else if (filter === 'RATING'){
+    books.sort((a, b) => b.rating - a.rating);
+  }
+  
+
+  const booksHTML = books
+    .map(book =>{
+      return `<div class="book">
+    <figure class="book__img--wrapper">
+      <img class="book__img" src="${book.url}" alt="">
+    </figure>
+    <div class="book__title">
+      ${book.title}
+    </div>
+    <div class="book__ratings">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    <div class="book__price">
+      <span>$${book.originalPrice.toFixed(2)}</span> 
+    </div>
+  </div>`
+    })
+    .join("");
+
+  booksWrapper.innerHTML = booksHTML
+}
+
+function filterBooks(event){
+    renderBooks(event.target.value)
 }
 
 
