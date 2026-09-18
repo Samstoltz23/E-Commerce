@@ -35,10 +35,11 @@ function renderBooks(filter) {
   booksWrapper.innerHTML = booksHTML
 }
 
+
 function ratingsHTML(rating){
   let ratingHTML = '';
-  for(let i = 0; i < Math.floor(4.5); ++i){
-    ratingHMTL += '<i class="fas fa-star"></i>\n'
+  for(let i = 0; i < Math.floor(rating); ++i){
+    ratingHTML += '<i class="fas fa-star"></i>\n'
   }
   if(!Number.isInteger(rating)){
     ratingHTML += <i class="fas fa-star-half-alt"></i>
